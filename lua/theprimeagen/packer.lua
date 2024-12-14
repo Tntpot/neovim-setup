@@ -20,9 +20,10 @@ return require('packer').startup(function(use)
             require('tokyonight').setup(
                 {
                     style = 'storm',
+                    transparent = true,
                     on_colors = function(colors)
                         colors.comment = colors.orange
-                    end
+                    end,
                 });
             vim.cmd('colorscheme tokyonight')
         end
