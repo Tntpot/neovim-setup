@@ -39,11 +39,11 @@ lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
 
     -- Format keymap
-    -- vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format({ async = false, timeout_ms = 10000 }) end, opts)
-    vim.keymap.set("n", "<leader>f", function()
-        vim.api.nvim_command(":PrettierAsync")
-        print("File Formatted (or at least I tried..")
-    end, opts);
+    vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format({ async = false, timeout_ms = 10000 }) end, opts)
+    -- vim.keymap.set("n", "<leader>f", function()
+    --     vim.api.nvim_command(":PrettierAsync")
+    --     print("File Formatted (or at least I tried..)")
+    -- end, opts);
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "gdd", function() vim.lsp.buf.implementation() end, opts)
