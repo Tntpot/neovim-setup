@@ -10,7 +10,7 @@ return {
 				"lua",
 				"c_sharp",
 				"markdown",
-				"markdown-inline",
+				"markdown_inline",
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
